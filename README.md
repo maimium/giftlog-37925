@@ -1,24 +1,60 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名	
 
-Things you may want to cover:
+## アプリケーション概要
+このアプリケーションでできることを記載。
 
-* Ruby version
+## URL
+デプロイ済みのURLを記載。デプロイが済んでいない場合は、デプロイが完了次第記載すること。
 
-* System dependencies
+## テスト用アカウント
+ログイン機能等を実装した場合は、ログインに必要な情報を記載。またBasic認証等を設けている場合は、そのID/Passも記載すること。
 
-* Configuration
+## 利用方法
+このアプリケーションの利用方法を記載。説明が長い場合は、箇条書きでリスト化すること。
 
-* Database creation
+## アプリケーションを作成した背景
 
-* Database initialization
+### ターゲット
+・性別 ： 女性 Aさん 
+・年齢 ： 20代 
+・仕事 ： 旅行関係の広告アカウントをSNSで運用している。
+         起業に向けて準備を進めている。
+         4年後に拠点を関西から東京に移したい。
+         東京での人脈を広げるため定期的にアポを取り東京に来ている。
+・趣味 ： デパ地下巡り。
+         人と会うときにお土産として持っていけるものをピックアップしている。
 
-* How to run the test suite
+【課題】誰に何をプレゼントしたのか、誰から何をいただいたのかわからなくなってしまう
+       その都度携帯のメモアプリに記録をしているが、埋もれてしまう
+       文章でメモしてもわかりにくい
+       画像とともに記録ができるといい
 
-* Services (job queues, cache servers, search engines, etc.)
+### 課題を解決するための機能
+自身が贈ったプレゼントやいただいたプレゼントを画像とともに記録することができる
+自身がおすすめするプレゼント情報を共有することができる
 
-* Deployment instructions
+## 洗い出した要件
+https://docs.google.com/spreadsheets/d/1w2ntUySjQcezmQ6rZO6P2T7sJclg-0OgWFAAvmT2QQg/edit?usp=sharing
 
-* ...
+## 実装した機能についての画像やGIFおよびその説明
+※	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記載。画像はGyazoで、GIFはGyazoGIFで撮影すること。
+
+## 実装予定の機能
+洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記載。
+
+## データベース設計
+ER図を添付。
+
+## 画面遷移図
+画面遷移図を添付。
+
+## 開発環境
+
+
+## ローカルでの動作方法
+※	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記載。
+
+## 工夫したポイント
+※	制作背景・使用技術・開発方法・タスク管理など、企業へＰＲしたい事柄を記載。
