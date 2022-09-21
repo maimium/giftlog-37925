@@ -1,0 +1,7 @@
+.side-whole {
+  width: 20vw;
+  height: 75vh;
+  padding: 2vh 2vw;
+  display: flex;
+  background-color: #e6e6fa;
+}
