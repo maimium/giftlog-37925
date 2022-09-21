@@ -1,0 +1,7 @@
+.footer-whole {
+  width: 100vw;
+  height: 10vh;
+  padding: 2vh 50vw;
+  display: flex;
+  background-color: #666666;
+}

@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="dCv6yTojlynkHRda8SDU" name="ページ1">
-        <mxGraphModel dx="644" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1110" dy="680" grid="0" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="13" value="users" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=1;labelBorderColor=none;fontColor=#FFFFFF;strokeColor=#333333;swimlaneFillColor=#FFFFFF;fillColor=#333333;" vertex="1" parent="1">
-                    <mxGeometry x="170" y="80" width="180" height="220" as="geometry"/>
+                    <mxGeometry x="170" y="90" width="180" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;labelBorderColor=#0066CC;fontColor=#333333;strokeColor=#333333;" vertex="1" parent="13">
                     <mxGeometry y="30" width="180" height="30" as="geometry"/>
@@ -392,25 +392,25 @@
                 </mxCell>
                 <UserObject label="&lt;font color=&quot;#0066cc&quot;&gt;青字&lt;/font&gt;：Ruby on rails による自動生成" placeholders="1" name="Variable" id="91">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rounded=1;labelBorderColor=none;fontColor=#333333;fontStyle=1" vertex="1" parent="1">
-                        <mxGeometry x="440" y="100" width="210" height="20" as="geometry"/>
+                        <mxGeometry x="520" y="200" width="210" height="20" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject label="&lt;font color=&quot;#cc0066&quot;&gt;ピンク字&lt;/font&gt;：Gemを使用したカラム" placeholders="1" name="Variable" id="92">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rounded=1;labelBorderColor=none;fontColor=#333333;fontStyle=1" vertex="1" parent="1">
-                        <mxGeometry x="440" y="120" width="190" height="20" as="geometry"/>
+                        <mxGeometry x="520" y="220" width="190" height="20" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject label="&lt;font color=&quot;#ff9933&quot;&gt;オレンジ字&lt;/font&gt;：Active Hash を使用したカラム" placeholders="1" name="Variable" id="93">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rounded=1;labelBorderColor=none;fontColor=#333333;fontStyle=1;arcSize=50;" vertex="1" parent="1">
-                        <mxGeometry x="440" y="140" width="250" height="20" as="geometry"/>
+                        <mxGeometry x="520" y="240" width="250" height="20" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="99" style="edgeStyle=none;html=1;entryX=0.442;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;labelBorderColor=#333333;fontColor=#0066CC;strokeColor=#333333;exitX=-0.003;exitY=-0.133;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=15;startArrow=ERone;startFill=0;" edge="1" parent="1" target="26">
+                <mxCell id="99" style="edgeStyle=none;html=1;entryX=0.442;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;labelBorderColor=#333333;fontColor=#0066CC;strokeColor=#333333;exitX=-0.003;exitY=-0.133;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=15;startArrow=ERone;startFill=0;" edge="1" parent="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="169.46000000000004" y="169.01" as="sourcePoint"/>
-                        <mxPoint x="119.55999999999995" y="318.91999999999996" as="targetPoint"/>
+                        <mxPoint x="169.46000000000004" y="170.01" as="sourcePoint"/>
+                        <mxPoint x="119.55999999999995" y="359.4" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="120" y="169"/>
+                            <mxPoint x="120" y="170"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
