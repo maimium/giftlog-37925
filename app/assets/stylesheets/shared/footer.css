@@ -1,7 +1,12 @@
 .footer-whole {
   width: 100vw;
-  height: 10vh;
-  padding: 2vh 50vw;
-  display: flex;
-  background-color: #666666;
+  height: 5vh;
+  background-color: #bd7093;
+}
+
+.footing{
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 1vh;
 }
