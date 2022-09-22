@@ -10,13 +10,15 @@
 <%= form_with model: @user, url: user_session_path, class: "login-main", local: true do |f| %>
 <div class="form-wrap">
   <div class="form-header">
-    <h1 class="form-header-text">
+    <div class="form-header-text">
       ログイン
-    </h1>
+    </div>
   </div>
 
-  <%= render "shared/error_messages", model: f.object %>
-
+  <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
 
   <div class="form-group">
     <div class="form-text-wrap">

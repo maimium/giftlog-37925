@@ -48,3 +48,8 @@ a {
 .user-nav {
   color: #bd7093;
 }
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
