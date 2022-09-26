@@ -2,12 +2,24 @@
 <%= render "shared/header" %>
 <%# ヘッダー %>
 
-<%# サイドバーとメインバー %>
 <div class="content-whole">
+<%# サイドバー %>
 <%= render "shared/side_ber"%>
-<%= render "shared/main" %>
+<%# サイドバー %>
+
+<%# メインバー %>
+
+贈った物一覧ページ
+
+<% @gave_gifts.each do |gave_gift| %>
+  <div class="gave_gifts">
+    <div class="gave_gift">
+    
+    </div>
+  </div>
+<% end %>
+<%# メインバー %>
 </div>
-<%# サイドバーとメインバー %>
 
 <%# フッター %>
 <%= render "shared/footer" %>

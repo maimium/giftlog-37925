@@ -1,6 +1,20 @@
 .side-whole {
   width: 20vw;
-  height: 79vh;
+  height: 80vh;
   padding: 2vh 2vw;
   background-color: #ffc0cb;
+}
+
+.myname {
+  margin-bottom: 20px;
+}
+
+.gave-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.received-menu {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+
+      gave_gift:
+        image: 画像
+        g_date: 贈った日付
+        g_content: 内容
+        g_person: 相手のお名前
+        g_shop: 購入場所
+        g_situation: シチュエーション
+        recommend_id: おすすめするかどうか
+
+      received_gift:
+        image: 画像
+        r_date: いただいた日付
+        r_content: 内容
+        r_person: 相手のお名前
+        r_situation: シチュエーション
+        received_id: お返し済みかどうか

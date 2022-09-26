@@ -1,16 +1,29 @@
 <div class="side-whole">
-  Sidebar
-  <div class="mypage">
+  <div class="myname">
     <%= current_user.nickname %>さん
   </div>
   <div class="">
-    <div class="">
-      <%= link_to "贈った物", "#", class: "post" %>
+    <div class="gave-menu">
+      <div class="">
+        <%= link_to "贈った物", gave_gifts_path, class: "post" %>
+      </div>
+      <div class="">
+        <%= link_to "記録する", new_gave_gift_path, class: "post" %>
+      </div>
     </div>
-    <div class="">
-      <%= link_to "いただいた物", "#", class: "post" %>
+    <div class="received-menu">
+      <div class="">
+        <%= link_to "いただいた物", received_gifts_path, class: "post" %>
+      </div>
+        <div class="">
+        <%= link_to "記録する", new_received_gift_path, class: "post" %>
+      </div>
     </div>
   </div>
+    <div class="">
+      <%= link_to "おすすめギフト", recommend_gifts_path, class: "post" %>
+    </div>
+
   <div class="logout-box">
     <div class="logout-btn">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
