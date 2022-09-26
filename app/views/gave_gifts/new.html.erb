@@ -1,0 +1,108 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+<%# ヘッダー %>
+
+<div class="content-whole">
+<%# サイドバー %>
+<%= render "shared/side_ber"%>
+<%# サイドバー %>
+
+<%# メインバー %>
+
+<div class="main-log-form">   
+  <%= form_with model: @gave_gift, class: 'form', local: true do |f| %>
+
+  <%= render "shared/error_messages", model: f.object %>
+
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+
+    <div class="bold-text">
+      贈った日付
+    <span class="indispensable">必須</span>
+    </div>
+    <div class='input-date-wrap'>
+      <%= raw sprintf(
+                    f.date_select(
+                    :g_date,
+                    class:'select-date',
+                    id:"g-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2000,
+                    end_year: (Time.now.year),
+                    date_separator: '%s'),
+                    "年", "月") + "日" %>
+    </div>
+
+    <div class="bold-text">
+      内容
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :g_content, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      相手のお名前
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :g_person, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      購入場所
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :g_shop, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      シチュエーション
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :g_situation, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      メモ
+    </div>
+    <div class="form-input">
+      <%= f.text_area :g_memo, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      他のユーザーにおすすめしますか？
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-select">
+      <%= f.collection_select(:recommend_id, Recommend.all, :id, :name, {}, {class:"select-box", id:"reccomend-id"}) %>
+    </div>
+
+    <span class="commentary">
+    「おすすめする」に設定すると他のユーザーに<br>
+    この記録の「写真」「内容」「購入場所」が公開されます。<br></span>
+
+    <span class="commentary">
+    他のユーザーが不快になるような内容や<br>
+    個人を特定できる内容が含まれていないか確認してください。</span>
+
+    <div class="submit-btn">
+      <%= f.submit '記録', class: 'form-submit' %>
+    </div>
+
+  <% end %>
+
+</div>
+
+<%# メインバー %>
+</div>
+
+<%# フッター %>
+<%= render "shared/footer" %>
+<%# フッター %>

@@ -1,0 +1,92 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+<%# ヘッダー %>
+
+<div class="content-whole">
+<%# サイドバー %>
+<%= render "shared/side_ber"%>
+<%# サイドバー %>
+
+<%# メインバー %>
+
+<div class="main-log-form">   
+  <%= form_with model: @received_gift, class: 'form', local: true do |f| %>
+
+  <%= render "shared/error_messages", model: f.object %>
+
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+
+    <div class="bold-text">
+      いただいた日付
+    <span class="indispensable">必須</span>
+    </div>
+    <div class='input-date-wrap'>
+      <%= raw sprintf(
+                    f.date_select(
+                    :r_date,
+                    class:'select-birth',
+                    id:"r-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2000,
+                    end_year: (Time.now.year),
+                    date_separator: '%s'),
+                    "年", "月") + "日" %>
+    </div>
+
+    <div class="bold-text">
+      内容
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :r_content, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      相手のお名前
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :r_person, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      シチュエーション
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-input">
+      <%= f.text_field :r_situation, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      メモ
+    </div>
+    <div class="form-input">
+      <%= f.text_area :r_memo, class: 'form-message' %>
+    </div>
+
+    <div class="bold-text">
+      お返し済みですか？
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form-select">
+      <%= f.collection_select(:received_id, Received.all, :id, :name, {}, {class:"select-box", id:"received-id"}) %>
+    </div>
+
+    <div class="submit-btn">
+      <%= f.submit '記録', class: 'form-submit' %>
+    </div>
+
+  <% end %>
+
+</div>
+
+<%# メインバー %>
+</div>
+
+<%# フッター %>
+<%= render "shared/footer" %>
+<%# フッター %>
