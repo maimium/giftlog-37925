@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     root :to => "devise/sessions#new"
   end
 
-  resources :received_gifts
   resources :gave_gifts
-  resources :recommend_gifts
+  resources :received_gifts
+  resources :recommend_gifts, only:[:index, :show]
  
 end
