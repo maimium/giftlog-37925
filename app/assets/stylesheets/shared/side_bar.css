@@ -3,6 +3,8 @@
   height: 80vh;
   padding: 2vh 2vw;
   background-color: #ffc0cb;
+  min-width: 250px;
+  position: sticky;
 }
 
  /* 見出しのリボン */
@@ -107,7 +109,6 @@ button.btn {
   vertical-align: middle;
   text-decoration: none;
   letter-spacing: 0.1em;
-  color: #212529;
   border-radius: 0.5rem;
 }
 
@@ -116,7 +117,7 @@ a.btn-flat {
   height: 40px;
   overflow: hidden;
   padding: 8px 20px;
-  color: #808080;
+  color: #333;
   border-radius: 0;
   background: #fffaf0;
 }
@@ -136,7 +137,7 @@ a.btn-a:before {
   transition: all .5s ease-in-out;
   -webkit-transform: translateX(-96%);
   transform: translateX(-96%);
-  background: #b63e4c;
+  background: #ff9e9e;
 }
 
 a.btn-b:before {
@@ -150,7 +151,7 @@ a.btn-b:before {
   transition: all .5s ease-in-out;
   -webkit-transform: translateX(-96%);
   transform: translateX(-96%);
-  background: #7168eb;
+  background: #9eceff;
 }
 
 a.btn-c:before {
@@ -164,7 +165,7 @@ a.btn-c:before {
   transition: all .5s ease-in-out;
   -webkit-transform: translateX(-96%);
   transform: translateX(-96%);
-  background: #ebc868;
+  background: #ecdaaa;
 }
 
 a.btn-flat:hover:before {

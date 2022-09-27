@@ -9,19 +9,23 @@
 
 <%# メインバー %>
 
-<div class="main-log-form">   
+<div class="main-log-form">
+  <span class="form-title-g">贈った物記録フォーム</h3></span>
+
   <%= form_with model: @gave_gift, class: 'form', local: true do |f| %>
 
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
-    </label>
+  <%= render "shared/error_messages", model: f.object %>
 
+    <div class="bold-text">画像</span>
+      <span class="indispensable">必須</span></div>
+      <div class="form-input">
+      <%= f.file_field :image, class: 'hidden' %>
+      </div>
     <div class="bold-text">
       贈った日付
     <span class="indispensable">必須</span>
     </div>
-    <div class='input-date-wrap'>
+    <div class="form-input">
       <%= raw sprintf(
                     f.date_select(
                     :g_date,
