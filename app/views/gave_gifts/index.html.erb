@@ -10,9 +10,9 @@
 <%# メインバー %>
 
 <div class="index-whole">
-  <span class="form-title-g">贈った物の記録</h3></span>
+  <span class="form-title-g">贈った物の記録</span>
 
-<ul class='gift-lists'>
+  <ul class='gift-lists'>
     <% @gave_gifts.each do |gave_gift| %>
       <li class='list'>
         <%#<%= link_to "/products/#{product.id}" do %>
@@ -23,8 +23,8 @@
         <div class='gift-info'>
           <div class='gift-info-box'>
             <%= gave_gift.g_content %>
-           </div>
-           <div class="gift-info-box">
+          </div>
+          <div class="gift-info-box">
             <%= gave_gift.g_person %>さんへ
           </div>
         </div>
