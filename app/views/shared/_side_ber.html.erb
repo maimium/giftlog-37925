@@ -1,32 +1,25 @@
 <div class="side-whole">
   <div class="myname">
-    <%= current_user.nickname %>さん
+    <h2><span></span><%= current_user.nickname %>さん</h2>
   </div>
-  <div class="">
-    <div class="gave-menu">
-      <div class="">
-        <%= link_to "贈った物", gave_gifts_path, class: "post" %>
+  <div class="husen-board">
+      <div class="menu-husen">
+        <a href="/gave_gifts" class="btn btn-flat btn-a"><span>贈った物</span></a>
       </div>
-      <div class="">
-        <%= link_to "記録する", new_gave_gift_path, class: "post" %>
+      <div class="menu-husen">
+        <a href="/gave_gifts/new" class="btn btn-flat btn-a"><span>記録する</span></a>
       </div>
-    </div>
-    <div class="received-menu">
-      <div class="">
-        <%= link_to "いただいた物", received_gifts_path, class: "post" %>
+      <div class="menu-husen">
+        <a href="/received_gifts" class="btn btn-flat btn-b"><span>いただいた物</span></a>
       </div>
-        <div class="">
-        <%= link_to "記録する", new_received_gift_path, class: "post" %>
+      <div class="menu-husen">
+        <a href="/received_gifts/new" class="btn btn-flat btn-b"><span>記録する</span></a>
       </div>
-    </div>
-  </div>
-    <div class="">
-      <%= link_to "おすすめギフト", recommend_gifts_path, class: "post" %>
-    </div>
-
-  <div class="logout-box">
-    <div class="logout-btn">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    </div>
+      <div class="menu-husen">
+        <a href="/recommend_gifts" class="btn btn-flat btn-c"><span>おすすめギフト</span></a>
+      </div>
+      <div class="logout-btn">
+        <%= link_to "ログアウト", destroy_user_session_path, class:"btn btn--logout", method: :delete %>
+      </div>
   </div>
 </div>
