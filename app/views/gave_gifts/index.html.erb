@@ -9,15 +9,30 @@
 
 <%# メインバー %>
 
-贈った物一覧ページ
+<div class="index-whole">
+  <span class="form-title-g">贈った物の記録</h3></span>
 
-<% @gave_gifts.each do |gave_gift| %>
-  <div class="gave_gifts">
-    <div class="gave_gift">
-    
-    </div>
-  </div>
-<% end %>
+<ul class='gift-lists'>
+    <% @gave_gifts.each do |gave_gift| %>
+      <li class='list'>
+        <%#<%= link_to "/products/#{product.id}" do %>
+        <div class='gift-img-box'>
+          <%= image_tag gave_gift.image, class: "gift-img" %>
+        </div>
+
+        <div class='gift-info'>
+          <div class='gift-info-box'>
+            <%= gave_gift.g_content %>
+           </div>
+           <div class="gift-info-box">
+            <%= gave_gift.g_person %>さんへ
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
 <%# メインバー %>
 </div>
 

@@ -1,0 +1,44 @@
+.gift-lists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.gift-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.gift-img-box {
+  position: relative;
+}
+
+.gift-img {
+  height: 15vh;
+  width: 15vh;
+}
+
+.received-alart {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-10deg); 
+}
+
+.received-alart>span {
+  color:fff;
+  font-size: 45px;
+  font: bold;
+}
+
+.gift-info {
+
+}
+
+.gift-info-box {
+  
+}
