@@ -10,30 +10,28 @@
 <%# メインバー %>
 
 <div class="index-whole">
-  <span class="form-title-r">いただいた物の記録</span>
+  <div class="form-title-r">いただいた物の記録</div>
 
   <ul class='gift-lists'>
     <% @received_gifts.each do |received_gift| %>
       <li class='list'>
-        <%#<%= link_to "/products/#{product.id}" do %>
+      <div class="gift-paper">
+        <div class='gift-info-date'>
+          <%= received_gift.r_date %>
+        </div>
         <div class='gift-img-box'>
           <%= image_tag received_gift.image, class: "gift-img" %>
-
-          <% if received_gift.received_id == "2" %>
-          <div class="received-alart">
-            <span>RECEIVED</span>
-          </div>
-          <% end %>
         </div>
 
         <div class='gift-info'>
           <div class='gift-info-box'>
             <%= received_gift.r_content %>
-           </div>
-           <div class="gift-info-box">
-            <%= received_gift.r_person %>さんより
+          </div>
+          <div class="gift-info-btn">
+            <%= link_to "詳細", "#" %>
           </div>
         </div>
+      </div>
       </li>
     <% end %>
   </ul>

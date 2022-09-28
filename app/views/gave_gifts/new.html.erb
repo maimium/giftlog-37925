@@ -10,7 +10,7 @@
 <%# メインバー %>
 
 <div class="main-log-form">
-  <span class="form-title-g">贈った物記録フォーム</span>
+  <div class="form-title-g">贈った物記録フォーム</div>
 
   <%= form_with model: @gave_gift, class: 'form', local: true do |f| %>
 
@@ -25,18 +25,18 @@
       贈った日付
     <span class="indispensable">必須</span>
     </div>
-    <div class="form-input">
+    <div class="date-input">
       <%= raw sprintf(
                     f.date_select(
                     :g_date,
-                    class:'select-date',
+                    class: "date-input",
                     id:"g-date",
                     use_month_numbers: true,
-                    prompt:'--',
+                    prompt:' - - - ',
                     start_year: 2000,
                     end_year: (Time.now.year),
                     date_separator: '%s'),
-                    "年", "月") + "日" %>
+                    "年  ", "月  ") + "日" %>
     </div>
 
     <div class="bold-text">
@@ -82,8 +82,8 @@
       他のユーザーにおすすめしますか？
       <span class="indispensable">必須</span>
     </div>
-    <div class="form-select">
-      <%= f.collection_select(:recommend_id, Recommend.all, :id, :name, {}, {class:"select-box", id:"reccomend-id"}) %>
+    <div class="m-form-select">
+      <%= f.collection_select(:recommend_id, Recommend.all, :id, :name, {}, {class:"", id:"reccomend-id"}) %>
     </div>
 
     <span class="commentary">

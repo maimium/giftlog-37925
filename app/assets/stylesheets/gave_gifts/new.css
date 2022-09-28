@@ -5,8 +5,9 @@
   height: 40px;
   text-align: left;
   font-weight: 600;
+  font-size: 16px;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #fff;
   border-radius: 0 100vh 100vh 0;
   background: #ff9e9e;
@@ -31,12 +32,44 @@
   overflow: auto;
 }
 
+/* 日付入力フォーム */
+
+.date-input {
+  position: relative;
+  font-size: 14px;
+  width: 180px;
+  height:40px;
+  padding: 6px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  border: solid 1px #999;
+  border-radius: 10px;
+  text-align:center;
+}
+
+.date-input:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(135deg);
+  pointer-events: none;
+}
+
 .form-input {
   margin-bottom: 20px;
 }
 
 .form-message {
   padding: 6px;
+  border: 2px solid #999;
+  border-radius: 0.67em; 
 }
 
 .form-select {
@@ -60,4 +93,61 @@
 .commentary {
   font-size: 14px;
   color: #666666;
+}
+
+
+/* セレクトボックス */
+
+.m-form-select {
+  position: relative;
+  width: 200px;
+  padding: 2px;
+  margin-bottom: 30px;
+  border: 1px solid #999;
+  border-radius: 0.67em; 
+}
+
+.m-form-select:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(135deg);
+  pointer-events: none;
+}
+
+.m-form-select select {
+  height: 2.4em;
+  width: 100%;
+  padding: 0 8px;
+  border-radius: 4px;
+  border: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* 記録ボタン */
+
+
+.form-submit {
+  width: 30%;
+  background: #bd7093;
+  border: 1px solid #bd7093;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 20px;
+  cursor: pointer;
 }
