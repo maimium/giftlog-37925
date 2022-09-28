@@ -46,7 +46,7 @@ h2 span:after {
   display: block;
   height: 50%;
   border: 26px solid #fa4141;
-  border-bottom-width: 15px;
+  border-bottom-width: 10px;
   border-bottom-color: transparent;
 }
 

@@ -11,34 +11,37 @@
   background-color: #FFF;
 }
 
-.gift-img-box {
-  position: relative;
+/* 投稿表示 */
+
+.gift-info-date {
+  font-size: 14px;
 }
 
 .gift-img {
-  height: 15vh;
-  width: 15vh;
+  height: 100px;
+  width: 120px;
+  margin: 12px 12px 0 12px;
 }
 
-.received-alart {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg); 
-}
-
-.received-alart>span {
-  color:fff;
-  font-size: 45px;
-  font: bold;
+.gift-paper {
+  height: 210px;
+  width: 160px;
+  background-color: bisque;
+  padding:10px;
+  box-shadow: 5px 5px 10px rgb(233, 209, 176);
 }
 
 .gift-info {
-
+  font-weight: 650;
+  text-align: center;
 }
 
-.gift-info-box {
-  
+.gift-info-btn {
+  height: 25px;
+  width: 120px;
+  background-color: aqua;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.8;
 }

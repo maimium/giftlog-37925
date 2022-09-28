@@ -18,4 +18,60 @@
   flex-direction: column;
   width: 100%; 
   overflow: auto;
+
+}
+
+/* 見出し */
+
+.form-title-c {
+  height: 40px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 0 100vh 100vh 0;
+  background: #ecdaaa;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+/* 横並びコンテンツ */
+
+.recommend-content {
+  display: flex;
+}
+
+/* 投稿表示 */
+
+.gift-info-date {
+  font-size: 14px;
+}
+
+.gift-img-c {
+  height: 100px;
+  width: 120px;
+  margin: 12px 12px 0 12px;
+}
+
+.gift-paper-c {
+  height: 180px;
+  width: 50vw;
+  background-color: bisque;
+  padding:10px;
+  box-shadow: 5px 5px 10px rgb(233, 209, 176);
+}
+
+.gift-info-c {
+  margin: 10px;
+}
+
+.gift-info-box {
+  margin: 10px;
+}
+
+.gift-info-title {
+  text-align: left;
+  font-weight: 600;
 }
