@@ -10,9 +10,9 @@
 <%# メインバー %>
 
 <div class="main-log-form">
-  <div class="form-title-g">贈った物記録フォーム</div>
+  <div class="form-title-r">いただいた物記録フォーム</div>
 
-  <%= form_with model: @gave_gift, class: 'form', local: true do |f| %>
+  <%= form_with model: @received_gift, class: 'form', local: true do |f| %>
 
   <%= render "shared/error_messages", model: f.object %>
 
@@ -21,18 +21,19 @@
       <div class="form-input">
       <%= f.file_field :image, class: 'hidden' %>
       </div>
+
     <div class="bold-text">
-      贈った日付
+      いただいた日付
     <span class="indispensable">必須</span>
     </div>
-    <div class="date-input">
+    <div class='date-input'>
       <%= raw sprintf(
                     f.date_select(
-                    :g_date,
-                    class: "date-input",
-                    id:"g-date",
+                    :r_date,
+                    class:'date-input',
+                    id:"r-date",
                     use_month_numbers: true,
-                    prompt:' - - - ',
+                    prompt:'  - - -  ',
                     start_year: 2000,
                     end_year: (Time.now.year),
                     date_separator: '%s'),
@@ -44,7 +45,7 @@
       <span class="indispensable">必須</span>
     </div>
     <div class="form-input">
-      <%= f.text_field :g_content, class: 'form-message' %>
+      <%= f.text_field :r_content, class: 'form-message' %>
     </div>
 
     <div class="bold-text">
@@ -52,15 +53,7 @@
       <span class="indispensable">必須</span>
     </div>
     <div class="form-input">
-      <%= f.text_field :g_person, class: 'form-message' %>
-    </div>
-
-    <div class="bold-text">
-      購入場所
-      <span class="indispensable">必須</span>
-    </div>
-    <div class="form-input">
-      <%= f.text_field :g_shop, class: 'form-message' %>
+      <%= f.text_field :r_person, class: 'form-message' %>
     </div>
 
     <div class="bold-text">
@@ -68,34 +61,26 @@
       <span class="indispensable">必須</span>
     </div>
     <div class="form-input">
-      <%= f.text_field :g_situation, class: 'form-message' %>
+      <%= f.text_field :r_situation, class: 'form-message' %>
     </div>
 
     <div class="bold-text">
       メモ
     </div>
     <div class="form-input">
-      <%= f.text_area :g_memo, class: 'form-message' %>
+      <%= f.text_area :r_memo, class: 'form-message' %>
     </div>
 
     <div class="bold-text">
-      他のユーザーにおすすめしますか？
+      お返し済みですか？
       <span class="indispensable">必須</span>
     </div>
     <div class="m-form-select">
-      <%= f.collection_select(:recommend_id, Recommend.all, :id, :name, {}, {class:"", id:"reccomend-id"}) %>
+      <%= f.collection_select(:received_id, Received.all, :id, :name, {}, {class:"m-form-select", id:"received-id"}) %>
     </div>
 
-    <span class="commentary">
-    「おすすめする」に設定すると他のユーザーに<br>
-    この記録の「写真」「内容」「購入場所」が公開されます。<br></span>
-
-    <span class="commentary">
-    他のユーザーが不快になるような内容や<br>
-    個人を特定できる内容が含まれていないか確認してください。</span>
-
     <div class="submit-btn">
-      <%= f.submit '記録', class: 'gave-form-submit' %>
+      <%= f.submit '記録', class: 'form-submit' %>
     </div>
 
   <% end %>

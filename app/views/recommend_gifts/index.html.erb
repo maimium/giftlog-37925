@@ -12,39 +12,33 @@
 <div class="index-whole">
   <div class="form-title-c">みんなのおすすめギフト</div>
 
-  
-
   <ul class='gift-lists'>
     <% @gave_gifts.each do |gave_gift| %>
       <li class='list'>
+      <% if gave_gift.recommend_id == 2 %>
 
-        <% if gave_gift.recommend_id == 2 %>
-          <div class="gift-paper-c">
-            <div class="gift-info-data">
-              <%= gave_gift.g_date %>
-            <div class="recommend-content">
+      <div class="recommend-paper">              
+        <div class="recommend-content">
               <div class='gift-img-box'>
-                <%= image_tag gave_gift.image, class: "gift-img-c" %>
+                <%= image_tag gave_gift.image, class: "recommend-img" %>
               </div>
-              <div class='gift-info-c'>
-                <div class='gift-info-box'>
-                  <span class="gift-info-title">内容：</span>
-                  <%= gave_gift.g_content %>
-                </div>
-                <div class="gift-info-box">
-                  <span class="gift-info-title">購入場所：</span>
-                  <%= gave_gift.g_shop %>
-                </div>
-                <div class="gift-info-box">
-                  <span class="gift-info-title">シチュエーション：</span>
-                  <%= gave_gift.g_situation %>
-                </div>
-                <div class="gift-info-box">
-                  <span class="gift-info-title">記録者：</span>
-                  <%= gave_gift.user.nickname %>
-                </div>            
-              </div>
-            </div>
+          <table class="recommend-table">
+            <tbody>
+              <tr>
+                <th class="detail-item"><%= gave_gift.user.nickname %>さんのおすすめ
+                <span class="deco-icon-c">▶︎▶︎</span></th>
+                <td class="detail-point"><%= gave_gift.g_content %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">購入場所</th>
+                <td class="detail-value"><%= gave_gift.g_shop %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">シチュエーション</th>
+                <td class="detail-value"><%= gave_gift.g_situation %></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <% end %>
       </li>

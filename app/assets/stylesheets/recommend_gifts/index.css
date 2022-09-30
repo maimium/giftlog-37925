@@ -1,13 +1,6 @@
-/* メインコンテンツの配置と背景 */
-
-.content-whole {
-  display: flex;
-  background-color: #ffc0cb;
-}
-
 .index-whole {
   height: 75vh;
-  margin: 20px;
+  margin: 20px 0 20px 30px;
   padding: 20px;
   overflow: auto;
   background-color: #ffffff;
@@ -17,7 +10,6 @@
   align-items: left;
   flex-direction: column;
   width: 100%; 
-  overflow: auto;
 
 }
 
@@ -32,35 +24,44 @@
   margin-bottom: 20px;
   color: #fff;
   border-radius: 0 100vh 100vh 0;
-  background: #ecdaaa;
+  background: #e2c984;
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
 }
 
-/* 横並びコンテンツ */
+/* 投稿表示 */
+
+.recommend-paper {
+  height: 150px;
+  width: 550px;
+  color: #333;
+  background-color: #fffaf0;
+  padding:10px;
+  box-shadow: 3px 3px 5px rgb(233, 209, 176);
+}
 
 .recommend-content {
   display: flex;
 }
 
-/* 投稿表示 */
-
-.gift-info-date {
-  font-size: 14px;
-}
-
-.gift-img-c {
+.recommend-img {
   height: 100px;
   width: 120px;
   margin: 12px 12px 0 12px;
 }
 
-.gift-paper-c {
-  height: 180px;
-  width: 50vw;
-  background-color: bisque;
-  padding:10px;
-  box-shadow: 5px 5px 10px rgb(233, 209, 176);
+.recommend-table {
+  height: 100px;
+  width: 500px;
+  margin: 20px 0 0 20px;
+}
+
+.detail-point {
+  font-weight: 600;
+}
+
+.deco-icon-c {
+  color: #e2c984;
 }
 
 .gift-info-c {
@@ -71,7 +72,3 @@
   margin: 10px;
 }
 
-.gift-info-title {
-  text-align: left;
-  font-weight: 600;
-}

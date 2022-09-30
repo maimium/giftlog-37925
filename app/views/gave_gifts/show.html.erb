@@ -1,0 +1,64 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+<%# ヘッダー %>
+
+<div class="content-whole">
+<%# サイドバー %>
+<%= render "shared/side_ber"%>
+<%# サイドバー %>
+
+<%# メインバー %>
+
+<div class="index-whole">
+  <div class="form-title-g"><%= @gave_gift.g_content %></div>
+
+  <div class="gift-page-paper">
+    <div class="gift-page-date"><span class="deco-icon-a">▶︎▶︎ </span>
+      <%= @gave_gift.g_date %></div>
+    <div class="gift-page-top">
+      <div class='gift-page-left'>
+        <%= image_tag @gave_gift.image, class: "gift-page-img" %>
+      </div>
+      <table class="detail-g-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">相手のお名前</th>
+            <td class="detail-value"><%= @gave_gift.g_person %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">購入場所</th>
+              <td class="detail-value"><%= @gave_gift.g_shop%></td>
+          </tr>
+          <tr>
+            <th class="detail-item">シチュエーション</th>
+            <td class="detail-value"><%= @gave_gift.g_situation %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">おすすめしますか？</th>
+            <td class="detail-value"><%= @gave_gift.recommend.name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gift-page-memo">
+      <div class="gift-info">メモ</div>
+      <div class="memo"><%= @gave_gift.g_memo%></div>
+    </div>
+  </div>  
+
+  <div class='w-btn-box'>
+    <div class="gave-edit-btn">
+      <%= link_to "編集", "/gave_gifts/#{@gave_gift.id}/edit", method: :get %>
+    </div>
+    <div class="gave-delete-btn">
+      <%= link_to "削除", "/gave_gifts/#{@gave_gift.id}", method: :delete %>
+    </div>
+  </div>
+
+</div>
+<%# メインバー %>
+</div>
+
+<%# フッター %>
+<%= render "shared/footer" %>
+<%# フッター %>

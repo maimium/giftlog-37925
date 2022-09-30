@@ -18,6 +18,33 @@ class GaveGiftsController < ApplicationController
       render action: :new
    end
   end
+
+  def show
+    @gave_gift = GaveGift.find(params[:id])
+  end
+
+  def edit
+    unless @gave_gift.user == current_user
+      redirect_to gave_gift_path
+    end
+  end
+
+  def update
+    if @gave_gift.update(gave_gift_params)
+      redirect_to gave_gift_path
+    else
+      render action :edit  
+   end
+  end 
+
+  def destroy
+    gave_gift = GaveGift.find(params[:id])
+    unless gave_gift.user == current_user
+      redirect_to gave_gift_path
+    end
+    gave_gift.destoroy
+    redirect_to gave_gifts_path
+  end
   
   private
 

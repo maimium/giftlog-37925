@@ -18,6 +18,35 @@ class ReceivedGiftsController < ApplicationController
       render action: :new
    end
   end
+
+  def show
+    @received_gift = ReceivedGift.find(params[:id])
+  end
+
+  def edit
+    unless @received_gift.user == current_user
+      redirect_to received_gift_path
+    end
+  end
+
+
+  def update
+    if @received_gift.update(received_gift_params)
+      redirect_to received_gift_path
+    else
+      render action :edit  
+   end
+  end 
+
+  def destroy
+    received_gift = ReceivedGift.find(params[:id])
+    unless received_gift.user == current_user
+      redirect_to  received_gift_path
+    end
+    received_gift.destoroy
+    redirect_to received_gifts_path
+  end
+
   
   private
 
