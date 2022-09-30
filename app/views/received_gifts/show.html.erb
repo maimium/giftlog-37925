@@ -1,0 +1,59 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+<%# ヘッダー %>
+
+<div class="content-whole">
+<%# サイドバー %>
+<%= render "shared/side_ber"%>
+<%# サイドバー %>
+
+<%# メインバー %>
+
+<div class="index-whole">
+  <div class="form-title-r"><%= @received_gift.r_content %></div>
+
+  <div class="gift-page-paper">
+    <div class="gift-page-date"><span class="deco-icon-b">▶︎▶︎ </span>
+      <%= @received_gift.r_date %></div>
+    <div class="gift-page-top">
+      <div class='gift-page-left'>
+        <%= image_tag @received_gift.image, class: "gift-page-img" %>
+      </div>
+      <table class="detail-r-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">相手のお名前</th>
+            <td class="detail-value"><%= @received_gift.r_person %> さん</td>
+          </tr>
+          <tr>
+            <th class="detail-item">シチュエーション</th>
+            <td class="detail-value"><%= @received_gift.r_situation %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">お返し済みですか？</th>
+            <td class="detail-value"><%= @received_gift.received.name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gift-page-memo">
+      <div class="gift-info">メモ</div>
+      <div class="memo"><%= @received_gift.r_memo%></div>
+    </div>
+  </div>  
+
+  <div class='w-btn-box'>
+    <div class="received-edit-btn">
+      <%= link_to "編集", "/received_gifts/#{@received_gift.id}/edit", method: :get %>
+    </div>
+    <div class="received-delete-btn">
+      <%= link_to "削除", "/received_gifts/#{@received_gift.id}", method: :delete %>
+    </div>
+  </div>
+</div>
+<%# メインバー %>
+</div>
+
+<%# フッター %>
+<%= render "shared/footer" %>
+<%# フッター %>

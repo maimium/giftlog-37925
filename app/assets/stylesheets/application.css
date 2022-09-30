@@ -16,4 +16,14 @@
 
  * {
   box-sizing: border-box;
- }
+}
+
+/* メインコンテンツの配置と背景 */
+
+.content-whole {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  padding: 0 30px;
+  background-color: #ffc0cb;
+}

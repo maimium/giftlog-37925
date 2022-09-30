@@ -10,16 +10,14 @@
   margin-bottom: 20px;
   color: #fff;
   border-radius: 0 100vh 100vh 0;
-  background: #9eceff;
+  background: #94b6e8;
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
 }
 
-/* 記録フォーム */
-
 .main-log-form {
   height: 75vh;
-  margin: 20px;
+  margin: 20px 0 20px 30px;
   padding: 20px;
   overflow: auto;
   background-color: #ffffff;
@@ -31,6 +29,7 @@
   width: 100%; 
   overflow: auto;
 }
+
 
 /* 日付入力フォーム */
 
@@ -142,10 +141,14 @@
 /* 記録ボタン */
 
 
-.form-submit {
+.submit-btn {
+  margin-left: 30px;
+}
+
+.received-form-submit {
   width: 30%;
-  background: #bd7093;
-  border: 1px solid #bd7093;
+  background: #94b6e8;
+  border: 1px solid #94b6e8;
   color: #fff;
   line-height: 48px;
   font-size: 14px;

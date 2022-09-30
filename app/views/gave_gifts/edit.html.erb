@@ -10,7 +10,7 @@
 <%# メインバー %>
 
 <div class="main-log-form">
-  <div class="form-title-g">贈った物記録フォーム</div>
+  <div class="form-title-g">贈った物編集フォーム</div>
 
   <%= form_with model: @gave_gift, class: 'form', local: true do |f| %>
 
@@ -95,7 +95,7 @@
     個人を特定できる内容が含まれていないか確認してください。</span>
 
     <div class="submit-btn">
-      <%= f.submit '記録', class: 'gave-form-submit' %>
+      <%= f.submit '記録', class: 'form-submit' %>
     </div>
 
   <% end %>

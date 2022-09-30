@@ -1,9 +1,9 @@
 .side-whole {
   width: 20vw;
   height: 80vh;
-  padding: 2vh 2vw;
+  padding-top: 20px;
   background-color: #ffc0cb;
-  min-width: 250px;
+  min-width: 200px;
   position: sticky;
 }
 
@@ -119,6 +119,7 @@ a.btn-flat {
   padding: 8px 20px;
   color: #333;
   border-radius: 0;
+  box-shadow: 3px 3px 5px rgb(233, 209, 176);
   background: #fffaf0;
 }
 
