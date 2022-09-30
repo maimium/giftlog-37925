@@ -43,12 +43,12 @@
   </div>  
 
   <div class='w-btn-box'>
-    <div class="received-edit-btn">
-      <%= link_to "編集", "/received_gifts/#{@received_gift.id}/edit", method: :get %>
-    </div>
-    <div class="received-delete-btn">
-      <%= link_to "削除", "/received_gifts/#{@received_gift.id}", method: :delete %>
-    </div>
+    <%= link_to "/received_gifts/#{@received_gift.id}/edit", method: :get do%>
+      <button class="received-edit-btn">編集</button>
+    <% end %>
+    <%= link_to "/received_gifts/#{@received_gift.id}", method: :delete do%>
+      <button class="received-delete-btn">削除</button>
+    <% end %>
   </div>
 </div>
 <%# メインバー %>

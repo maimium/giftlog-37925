@@ -14,25 +14,27 @@
 
   <ul class='gift-lists'>
     <% @received_gifts.each do |received_gift| %>
-      <li class='list'>
-      <div class="gift-paper">
-        <div class='gift-info-date'>
-          <%= received_gift.r_date %>
-        </div>
-        <div class='gift-img-box'>
-          <%= image_tag received_gift.image, class: "gift-img" %>
-        </div>
+      <% if user_signed_in? && received_gift.user.id == current_user.id %>
+        <li class='list'>
+        <div class="gift-paper">
+          <div class='gift-info-date'>
+            <%= received_gift.r_date %>
+          </div>
+          <div class='gift-img-box'>
+            <%= image_tag received_gift.image, class: "gift-img" %>
+          </div>
 
-        <div class='gift-info'>
-          <div class='gift-info-box'>
-            <%= received_gift.r_content %>
-          </div>
-          <div class="received-info-btn">
-            <%= link_to "詳細", "/received_gifts/#{received_gift.id}" %>
+          <div class='gift-info'>
+            <div class='gift-info-box'>
+              <%= received_gift.r_content %>
+            </div>
+            <%= link_to "/received_gifts/#{received_gift.id}", method: :get do%>
+              <button class="received-info-btn">詳細</button>
+            <% end %>
           </div>
         </div>
-      </div>
-      </li>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 

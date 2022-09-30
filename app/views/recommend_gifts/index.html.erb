@@ -12,11 +12,10 @@
 <div class="index-whole">
   <div class="form-title-c">みんなのおすすめギフト</div>
 
-  <ul class='gift-lists'>
+  <ul class='recommend-lists'>
     <% @gave_gifts.each do |gave_gift| %>
-      <li class='list'>
       <% if gave_gift.recommend_id == 2 %>
-
+      <li class='r-list'>
       <div class="recommend-paper">              
         <div class="recommend-content">
               <div class='gift-img-box'>

@@ -23,7 +23,7 @@
         <tbody>
           <tr>
             <th class="detail-item">相手のお名前</th>
-            <td class="detail-value"><%= @gave_gift.g_person %></td>
+            <td class="detail-value"><%= @gave_gift.g_person %> さん</td>
           </tr>
           <tr>
             <th class="detail-item">購入場所</th>
@@ -47,12 +47,12 @@
   </div>  
 
   <div class='w-btn-box'>
-    <div class="gave-edit-btn">
-      <%= link_to "編集", "/gave_gifts/#{@gave_gift.id}/edit", method: :get %>
-    </div>
-    <div class="gave-delete-btn">
-      <%= link_to "削除", "/gave_gifts/#{@gave_gift.id}", method: :delete %>
-    </div>
+    <%= link_to "/gave_gifts/#{@gave_gift.id}/edit", method: :get do%>
+      <button class="gave-edit-btn">編集</button>
+    <% end %>
+    <%= link_to "/gave_gifts/#{@gave_gift.id}", method: :delete do%>
+      <button class="gave-delete-btn">削除</button>
+    <% end %>
   </div>
 
 </div>

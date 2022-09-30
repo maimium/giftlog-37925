@@ -20,6 +20,8 @@
       <span class="indispensable">必須</span></div>
       <div class="form-input">
       <%= f.file_field :image, class: 'hidden' %>
+        <span class="commentary">
+        <br>変更する場合のみ選択し直してください</span>
       </div>
 
     <div class="bold-text">
@@ -80,7 +82,7 @@
     </div>
 
     <div class="submit-btn">
-      <%= f.submit '記録', class: 'form-submit' %>
+      <%= f.submit '記録', class: 'received-form-submit' %>
     </div>
 
   <% end %>

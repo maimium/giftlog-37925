@@ -1,9 +1,9 @@
 class ReceivedGiftsController < ApplicationController
   before_action :authenticate_user!
-  before_action :gift_page, only:[:show, :edit, :update]
+  before_action :my_gift, only:[:show, :edit, :update]
 
   def index
-    @received_gifts = ReceivedGift.order("created_at DESC")
+    @received_gifts = ReceivedGift.all.order(created_at: :desc)
   end
 
   def new
@@ -50,8 +50,11 @@ class ReceivedGiftsController < ApplicationController
   
   private
 
-  def gift_page
+  def my_gift
     @received_gift = ReceivedGift.find(params[:id])
+    unless @received_gift.user.id == current_user.id
+      redirect_to recommend_gifts_path
+    end
   end
 
   def received_gift_params

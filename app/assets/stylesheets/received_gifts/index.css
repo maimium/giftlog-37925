@@ -19,11 +19,11 @@
   justify-content: left;
 }
 
-.gift-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
+.list {
+  width: 160px;
+  margin: 0 30px 20px 0; 
 }
+
 
 /* 投稿表示 */
 
@@ -43,11 +43,12 @@
 }
 
 .gift-paper {
-  height: 210px;
+  height: 230px;
   width: 160px;
   background-color: #fffaf0;
   padding:10px;
   box-shadow: 3px 3px 5px rgb(233, 209, 176);
+  position: relative;
 }
 
 /* 詳細ボタン */
@@ -55,11 +56,13 @@
 .received-info-btn {
   height: 25px;
   width: 120px;
-  width: 100%;
   background: #94b6e8;
   border: 1px solid #94b6e8;
   color: #fff;
   line-height: 24px;
   font-size: 14px;
   border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }

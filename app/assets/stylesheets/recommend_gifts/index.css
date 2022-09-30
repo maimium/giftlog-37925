@@ -44,6 +44,10 @@
   display: flex;
 }
 
+.r-list {
+  margin-bottom: 20px;
+}
+
 .recommend-img {
   height: 100px;
   width: 120px;

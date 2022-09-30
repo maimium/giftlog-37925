@@ -1,10 +1,7 @@
 class RecommendGiftsController < ApplicationController
  
   def index
-    @gave_gifts = GaveGift.order("created_at DESC")
-  end
-
-  def show
+    @gave_gifts = GaveGift.all.order(created_at: :desc)
   end
 
 end
