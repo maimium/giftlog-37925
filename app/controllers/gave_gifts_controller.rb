@@ -42,7 +42,7 @@ class GaveGiftsController < ApplicationController
     unless gave_gift.user == current_user
       redirect_to gave_gift_path
     end
-    gave_gift.destoroy
+    gave_gift.destroy
     redirect_to gave_gifts_path
   end
   

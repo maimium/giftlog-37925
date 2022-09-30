@@ -43,7 +43,7 @@ class ReceivedGiftsController < ApplicationController
     unless received_gift.user == current_user
       redirect_to  received_gift_path
     end
-    received_gift.destoroy
+    received_gift.destroy
     redirect_to received_gifts_path
   end
 
