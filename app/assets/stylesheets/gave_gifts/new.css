@@ -39,28 +39,14 @@
   font-size: 14px;
   width: 180px;
   height:40px;
-  padding: 6px;
-  padding-left: 20px;
+  padding: 10px;
   margin-bottom: 30px;
   border: solid 1px #999;
   border-radius: 10px;
   text-align:center;
 }
 
-.date-input:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 10px;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid #333;
-  border-right: 2px solid #333;
-  transform: rotate(135deg);
-  pointer-events: none;
-}
+
 
 .form-input {
   margin-bottom: 20px;
@@ -91,8 +77,11 @@
 }
 
 .commentary {
+  margin-top: 30px;
   font-size: 14px;
-  color: #666666;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #666;
 }
 
 
