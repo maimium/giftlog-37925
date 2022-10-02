@@ -54,6 +54,14 @@ h2 span:after {
 
 .myname {
   font-weight: 600;
+  text-align: center;
+}
+
+.name-space {
+  margin-left: 8px;
+}
+
+.san {
   text-align: right;
 }
 
