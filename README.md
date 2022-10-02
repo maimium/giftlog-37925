@@ -24,7 +24,7 @@
 他のユーザーにその贈った物の、内容・シチュエーション・購入場所を共有することができます。<br><br>
 
 ## URL
-https://giftlog-37925.herokuapp.com/gave_gifts
+https://giftlog-37925.herokuapp.com/
 <br><br>
 
 ## テスト用アカウント
