@@ -38,7 +38,7 @@ https://giftlog-37925.herokuapp.com/
 * ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続してください。
 * 接続先およびログイン情報については、上記の通りです。
 * 同時に複数の方がログインしている場合に、ログインできない可能性があります。
-* テストアカウントでログイン　→　おすすめ一覧ページから贈った物記録(ピンク)orいただいた物記録ボタン（ブルー）押下　→　情報入力　→　記録される
+* テストアカウントでログイン　→　<br>おすすめ一覧ページから贈った物記録ボタン(ピンク)または、いただいた物記録ボタン（ブルー）押下　→　<br>情報入力　→　記録される
 * 贈った物記録の際に「おすすめする」を選ぶと、おすすめ一覧ページに保存されます。
 * 確認後、ログアウト処理をお願いします。
 <br><br>
@@ -73,7 +73,7 @@ https://docs.google.com/spreadsheets/d/1w2ntUySjQcezmQ6rZO6P2T7sJclg-0OgWFAAvmT2
 
 ## 実装した機能についての画像やGIFおよびその説明
 **ログイン画面**<br><br>
-<img src="https://i.gyazo.com/95c7392fa082c01139cd7328aa025e23.png" width="600" ><br>
+<img src="https://i.gyazo.com/b1712f9c6bd88be7ca5214c5f8ffe7bb.gif" width="600" ><br>
 <br>
 全ての機能がログインしたユーザーのみが使える仕様なので、ルートパスをログイン画面に設定しました。<br>
 ログインするために必要なのは「メールアドレス」と「パスワード」です。<br>
@@ -81,7 +81,7 @@ https://docs.google.com/spreadsheets/d/1w2ntUySjQcezmQ6rZO6P2T7sJclg-0OgWFAAvmT2
 
 
 **おすすめギフト一覧ページ**<br><br>
-<img src="https://i.gyazo.com/df1bf597bfae7ebf5ac28294e91296f9.gif" width="600"><br>
+<img src="https://i.gyazo.com/556787c8d17cf18955a1e9b4fbbc007f.jpg" width="600"><br>
 <br>
 贈った物を記録する際に、おすすめするかどうかの箇所をを「おすすめする」にしたものが一覧表示されるページです。<br>
 このページでは、他のユーザーが「おすすめする」にした記録も見ることができます。<br>
@@ -89,15 +89,19 @@ https://docs.google.com/spreadsheets/d/1w2ntUySjQcezmQ6rZO6P2T7sJclg-0OgWFAAvmT2
 「非表示のまま」にすると、こちらには表示されず、贈った物一覧ページにのみ表示されます。
 <br><br>
 
-**一覧ページと詳細ページ**<br><br>
-<img src="https://i.gyazo.com/ca3e3b9c468b6e76eb82bd6279f06237.gif" width="600"><br>
+**一覧ページ**<br><br>
+<img src="https://i.gyazo.com/0201ac27f730171cfa498028b9ff6887.png" width="600"><br>
+<img src="https://i.gyazo.com/e28ff7f129dd9271cd70694d7c2ae3fa.png" width="600"><br>
 <br>
-贈った物といただいた物それぞれに一覧ページがあります。<br>
+贈った物といただいた物それぞれに一覧ページがあります。<br><br>
+**詳細ページ**<br><br>
+<img src="https://i.gyazo.com/975e50884877578a1aa6434ac2d27533.gif" width="600"><br>
+<br>
 一覧ページの詳細から詳細ページに推移し、記録した内容全てとの確認と編集や削除を行えます。<br>
 <br><br>
 
 **記録ページとエラーメッセージ**<br><br>
-<img src="https://i.gyazo.com/a0877a9888dc34a01bbefdec3d8b0f99.gif" width="600"><br>
+<img src="https://i.gyazo.com/3217de6395685fa7149d1f4bce42b76c.gif" width="600"><br>
 <br>
 記録ページは贈った物といただいた物でほとんど同じですが、<br>
 見出しと下部のボタンの色を変えることで直感的に現在のページがどこなのか分かりやすくしています。<br>
@@ -114,7 +118,7 @@ https://docs.google.com/spreadsheets/d/1w2ntUySjQcezmQ6rZO6P2T7sJclg-0OgWFAAvmT2
 <img src="https://i.gyazo.com/26cf383b16c203b71099f40145ecb088.png" width="1000" ><br><br>
 
 ## 画面遷移図
-<img src="https://i.gyazo.com/4a8b0514324d339d64e760df0a32919e.png" width="700" ><br><br>
+<img src="https://i.gyazo.com/4a8b0514324d339d64e760df0a32919e.png" width="600" ><br><br>
 
 ## 開発環境
 Ruby / Ruby on Rails / MySQL / Github / AWS / Visual Studio Code<br><br>
@@ -126,6 +130,7 @@ Ruby / Ruby on Rails / MySQL / Github / AWS / Visual Studio Code<br><br>
 ループしてしまう状況から脱するというところに気づくまで時間がかかってしまいましたが、自力で調べて解決することができました。<br>
 <br>
 ### 直感的に判断しやすいデザイン
+<img src="https://i.gyazo.com/8565057f0fe0c2b70252d00606840901.gif" width="700"><br><br>
 贈った物一覧ページ と いただいた物一覧ページ、贈った物記録ページ と いただいた物記録ページ　の<br>
 ページのレイアウトが構造上ほとんど同じで間違えて記録してしまう可能性があると考えたため、<br>
 メニューボタンの背景色や見出しの色を変えることで、<br>
